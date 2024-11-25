@@ -1,0 +1,385 @@
+<!--Каманина Алина ИСП-421р-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Спортивный комплекс</title>
+    <!--Подключение стилей css-->  
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <!--Подключение Bootstrap-->  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!--Подключаем шрифты-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <!---->
+  </head>
+<body>
+  <header>
+    <div class="position-fix">
+      <nav class="navbar">
+        <div class="container">
+          <div class="navbar__wrap">
+            <div class="hamb">
+              <div class="hamb__field" id="hamb">
+                <span class="bar"></span> <span class="bar"></span>
+                <span class="bar"></span>
+              </div>
+            </div>
+            <a href="index.html" class="logo" id="logo">
+              <p>CпортГрад</p>
+              <img src="img/menu/logo.png" alt="" width="46">
+            </a>
+            <ul class="menu" id="menu">
+              <li>
+                <a href="index.html#glavnay">
+                  <img src="img/menu/home.png" alt="" class="bi" width="24">Главная
+                </a>
+              </li>
+              <li>
+                <a href="index.html#news">
+                  <img src="img/menu/news.png" alt="" class="bi" width="24">Новости
+                </a>
+              </li>
+              <li>
+                <a href="index.html#gallery">
+                  <img src="img/menu/gallery.png" alt="" class="bi" width="24">Галерея
+                </a>
+              </li>
+              <li>
+                <a href="index.html#documents">
+                  <img src="img/menu/document.png" alt="" class="bi" width="24">Документы
+                </a>
+              </li>
+              <li>
+                <a href="event.html">
+                  <img src="img/menu/event.png" alt="" class="bi" width="24">Мероприятия
+                </a>
+              </li>
+              <li>
+                <a href="sport.html#section">
+                  <img src="img/menu/play.png" alt="" class="bi" width="24">Секции
+                </a>
+              </li>
+              <li>
+                <a href="sport.html#raspisanie">
+                  <img src="img/menu/calendar.png" alt="" class="bi" width="24">Расписание
+                </a>
+              </li>
+              <li>
+                <a href="sport.html#trenera">
+                  <img src="img/menu/trener.png" alt="" class="bi" width="24">Тренеры
+                </a>
+              </li>
+              <li>
+                <a href="about-us.html">
+                  <img src="img/menu/about-us.png" alt="" class="bi" width="24">О Нас
+                </a>
+              </li>
+              <li>
+                <a href="about-us.html#contact">
+                  <img src="img/menu/contact.png" alt="" class="bi" width="24">Контакты
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>    
+    <div class="popup" id="popup"></div>
+
+    <div class="px-3 py-2 border-bottom top-header-2">
+      <div class="container d-flex flex-wrap justify-content-center">
+        <form class="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto">
+          <div class="phone_header">
+            <img src="img/contact/phone_gray.png" alt="">
+            <p>+7 911 542 68-25</p>
+          </div>
+
+        </form>
+
+        <div class="text-end">
+          <button type="button" class="btn btn-secondary me-2" data-bs-toggle="modal" data-bs-target="#login">Вход</button>
+            <!-- Modal for login Логин-->
+            <div class="modal fade" id="login" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <form action="">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="staticBackdropLabel">Авторизация</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="modal-form input-1">
+                          <label for="login"><b>Логин</b></label>
+                          <input type="text" placeholder=" Ведите логин" name="login" required>
+                      
+                          <label for="psw"><b>Пароль</b></label>
+                          <input type="password" placeholder=" Ведите пароль" name="psw" required>
+                          <label style="display: flex; align-items: baseline;">
+                            <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Запомнить меня
+                          </label>
+                          <div class="text-modal-body">
+                            <p>Нет аккаунта? <a href="" style="color:dodgerblue" data-bs-toggle="modal" data-bs-target="#singin-up">Зарегистрироваться</a>.</p>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="reset" class="btn btn-secondary">Очистить</button>
+                      <button type="submit" class="btn btn-primary" data-bs-target="#liveToastBtn">Вход</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#singin-up">Регистрация</button>
+          <!-- Modal Регистрация-->
+          <div class="modal fade" id="singin-up" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <form action="">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Регистрация</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                      <p>Пожалуйста, заполните эту форму, чтобы создать учетную запись.</p>
+                      <hr>
+                      <div class="modal-form input-1">
+                        <label for="name"><b>Имя</b><span class="color-red">*</span></label>
+                        <input type="text" placeholder="Ведите имя" name="name" required>
+
+                        <label for="surname"><b>Фамилия</b></label>
+                        <input type="text" placeholder="Ведите фамилию" name="surname">
+
+                        <label for="date"><b>Год рождения:</b><span class="color-red">*</span></label>
+                        <input id="date" type="date" required/>
+
+                        <label for="login"><b>Логин</b><span class="color-red">*</span></label>
+                        <input type="text" placeholder="Ведите логин" name="login" required>
+
+                        <label for="email"><b>Почта</b><span class="color-red">*</span></label>
+                        <input type="text" placeholder="Ведите Email" name="email" required>
+                    
+                        <label for="psw"><b>Пароль</b><span class="color-red">*</span></label>
+                        <input type="password" placeholder="Ведите пароль" name="psw" required>
+                    
+                        <label for="psw-repeat"><b>Повторите пароль</b><span class="color-red">*</span></label>
+                        <input type="password" placeholder="Повторите пароль" name="psw-repeat" required>
+                        <label><span class="color-red">*</span> - поля обязательные для заполнения.</label>
+                        <label style="display: flex; align-items: baseline;">
+                          <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Запомнить меня
+                        </label>
+                        <div class="text-modal-body">
+                          <p>Создавая учетную запись, вы соглашаетесь с нашим <a href="#" style="color:dodgerblue">Условием и конфиденциальностью</a>.</p>
+                          <p>Есть аккаунта? <a href="" style="color:dodgerblue" data-bs-toggle="modal" data-bs-target="#login">Войти</a>.</p>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="reset" class="btn btn-secondary">Очистить</button>
+                    <button type="submit" class="btn btn-primary" data-bs-target="#liveToastBtn">Отправить</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="btn-up btn-up_hide"></div>
+  </header>
+  <main>
+    <div class="title-name">
+      <h2>МЕРОПРИЯТИЯ</h2>
+    </div>
+    <div class="event" >
+      <div class="event-img">
+        <img src="img/event/magic-ice.png" alt="">
+      </div>
+      <div class="event-text">
+        <h2>Ледовое шоу «Волшебный лёд»</h2>
+        <p><span class="color-blue">29.11 - 8.12</span></p>
+        <div class="afisha-text">
+          <p>Приглашаем вас на незабываемое шоу фигурного катания «Волшебный лёд»!</p> 
+          <p>В программе представлены яркие номера, захватывающие трюки и невероятные перевоплощения на льду.</p> 
+          <p>Не упустите возможность насладиться этим волшебством на льду!</p>
+        </div>
+        <div>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#meropriatia">
+            Купить билет >
+          </button>
+          <!-- Modal для покупки билета-->
+          <div class="modal fade" id="meropriatia" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel">«Волшебный лёд»</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="tickets">
+                  <div class="ticket-selector">
+                    <div class="seats">
+                        <div class="status">
+                          <div class="item">Свободно</div>
+                          <div class="item">Забронировано</div>
+                          <div class="item">Выбранно</div>
+                        </div>
+                        <div class="all-seats">
+                          <input type="checkbox" name="tickets" id="s1" />
+                          <label for="s1" class="seat booked"></label>
+                        </div>
+                      </div>
+                      <div class="timings">
+                        <div class="dates">
+                          <input type="radio" name="date" id="d1" checked />
+                          <label for="d1" class="dates-item">
+                          <div class="day">Ноябрь</div>
+                            <div class="date">29, Пт</div>
+                          </label>
+                          <input type="radio" id="d2" name="date" />
+                          <label class="dates-item" for="d2">
+                            <div class="day">Ноябрь</div>
+                            <div class="date">30, Сб</div>
+                          </label>
+                          <input type="radio" id="d3" name="date" />
+                          <label class="dates-item" for="d3">
+                            <div class="day">Декабрь</div>
+                            <div class="date">7, Сб</div>
+                          </label>
+                          <input type="radio" id="d4" name="date" />
+                          <label class="dates-item" for="d4">
+                            <div class="day">Декабрь</div>
+                            <div class="date">8, Вс</div>
+                          </label>
+                        </div>
+                        <div class="times">
+                          <input type="radio" id="t2" name="time" />
+                          <label for="t2" class="time"> 14:00 </label>
+                          <input type="radio" id="t3" name="time" />
+                          <label for="t3" class="time"> 18:00 </label>
+                          <input type="radio" id="t4" name="time" />
+                          <label for="t4" class="time"> 21:30 </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="price">
+                      <div class="total">
+                        <span>Количество билетов: <span class="count">0</span> </span>
+                        <div class="amount">0</div>
+                      </div>
+                      <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#singin-up">Купить</button>
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="old-event">
+      <div class="title-name">
+        <h2>Прошедшие мероприятия</h2>
+      </div>
+      <div class="set-cards-oe">
+        <div class="card-oe">
+          <img src="img/event/old-event-1.png" alt="">
+          <p><span class="color-blue">Международный турнир «Fonbet Кубок Дружбы. Россия – Африка» Матч Россия - Тунис</span></p>
+          <p>22.11.2024 | 20:00</p>
+        </div>
+        <div class="card-oe">
+          <img src="img/event/old-event-2.png" alt="">
+          <p><span class="color-blue">Кубок России (женщины) ПБК МБА-МГУСиТ - ЖБК «Динамо»</span></p>
+          <p>21.11.2024 | 13:00</p>
+        </div>
+        <div class="card-oe">
+          <img src="img/event/old-event-3.png" alt="">
+          <p><span class="color-blue">Молодёжная лига ВТБ ПБК МБА-МАИ-Юниор - БК УНИКС-2</span></p>
+          <p>28.11.2024 | 13:00</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div class="footer_main bg-primary" id="footer">
+    <div class="container">
+      <footer class="py-3">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item"><a href="index.html#glavnay" class="nav-link px-2 text-light">Главная</a></li>
+          <li class="nav-item"><a href="index.html#news" class="nav-link px-2 text-light">Новости</a></li>
+          <li class="nav-item"><a href="index.html#gallery" class="nav-link px-2 text-light">Галерея</a></li>
+          <li class="nav-item"><a href="index.html#documents" class="nav-link px-2 text-light">Документы</a></li>
+          <li class="nav-item"><a href="sport.html#section" class="nav-link px-2 text-light">Секции</a></li>
+          <li class="nav-item"><a href="event.html" class="nav-link px-2 text-light">Мероприятия</a></li>
+          <li class="nav-item"><a href="sport.html" class="nav-link px-2 text-light">Расписание</a></li>
+          <li class="nav-item"><a href="sport.html" class="nav-link px-2 text-light">Тренера</a></li>
+          <li class="nav-item"><a href="about-us.html" class="nav-link px-2 text-light">О Нас</a></li>
+          <li class="nav-item"><a href="index.html#footer" class="nav-link px-2 text-light">Контакты</a></li>
+        </ul>
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3 foote-logo">
+          <li class="nav-item">Спортивный комплекс "СпортГрад"</li>
+          <div class="sportgrad">
+            <img src="img/menu/logo.png" alt="">
+          </div>
+        </ul>
+        <div class="contact">
+          <p class="col-md-4 mb-0 text-black-50">© 2024 Kamanina, Alina</p>
+
+          <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+              <li class="ms-3"><a href="https://t.me/sunrise3001"><img src="img/contact/telegram.png" alt="ссылка на телеграм" class="bi" width="24"></a></li>
+              <li class="ms-3"><a href="https://vk.com/sunrise3001"><img src="img/contact/vk.png" alt="ссылка на вконтакте" class="bi" width="24"></a></li>
+              <li class="ms-3"><a href="https://www.youtube.com/@bakery_team"><img src="img/contact/youtube.png" alt="ссылка на ютуб" class="bi" width="24"></a></li>
+            </ul>
+          </a>        
+        </div>
+      </footer>
+    </div>
+  </div>
+  <script>
+    
+    let seats = document.querySelector(".all-seats");
+    for (var i = 0; i < 59; i++) {
+      let randint = Math.floor(Math.random() * 2);
+      let booked = randint === 1 ? "booked" : "";
+      seats.insertAdjacentHTML(
+        "beforeend",
+        '<input type="checkbox" name="tickets" id="s' +
+          (i + 2) +
+          '" /><label for="s' +
+          (i + 2) +
+          '" class="seat ' +
+          booked +
+          '"></label>'
+      );
+    }
+
+    let tickets = seats.querySelectorAll("input");
+    tickets.forEach((ticket) => {
+      ticket.addEventListener("change", () => {
+        let amount = document.querySelector(".amount").innerHTML;
+        let count = document.querySelector(".count").innerHTML;
+        amount = Number(amount);
+        count = Number(count);
+
+        if (ticket.checked) {
+          count += 1;
+          amount += 200;
+        } else {
+          count -= 1;
+          amount -= 200;
+        }
+        document.querySelector(".amount").innerHTML = amount;
+        document.querySelector(".count").innerHTML = count;
+      });
+    });
+  </script>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</html>

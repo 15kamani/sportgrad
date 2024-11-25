@@ -1,0 +1,900 @@
+/*Каманина Алина ИСП-421р*/
+
+/*Цвета: основа - #0d6efd (bootstrap: primary),
+        контраст - #fd9c0d,
+        кнопки - #198754 (bootstrap: success)*
+Шрифты: font-family: "Open Sans", sans-serif;
+        font-family: "Montserrat", serif;
+        font-family: "Montserrat", sans-serif;*/
+
+/*Основные стили*/
+h1, h2, h3{
+    font-family: "Montserrat", sans-serif;
+}
+a,p {
+    font-family: "Open Sans", sans-serif;
+}
+
+/*Стилизуем шапку*/
+.navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 75px;
+    background: #0d6efd;
+  }
+  .position-fix{
+    position: fixed;
+    top: 0;
+    width: 100%; 
+    z-index: 1000;
+  }
+  .top-header-2{
+    margin-top: 90px;
+  }
+  .navbar__wrap {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+  }
+  
+  .hamb {
+    display: none;
+  }
+
+  .popup {
+    display: none;
+  }
+  
+  .logo {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+  }
+  
+  .menu > li > a {
+    text-decoration: none;
+  }
+  
+  .navbar__wrap .menu {
+    display: flex;
+  }
+  
+  .navbar__wrap .menu > li {
+    display: flex;
+    align-items: stretch;
+  }
+  
+  .navbar__wrap .menu > li > a {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .navbar__wrap .menu > li > a:hover {
+    color: rgba(255, 255, 255, 1);
+  }
+
+  .menu a{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+/*Стилизуем подвал*/
+.contact{
+    display: flex;
+}
+.sportgrad img{
+width: 100px;
+height: auto;
+}
+
+/*Главный контент*/
+main{
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+}
+.title-name{
+  margin-top: 2%;
+  margin-bottom: 3%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.title-name p{
+  font-size: 14pt;
+}
+.phone_header{
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+.phone_header p{
+  margin-bottom: 0;
+}
+.phone_header img{
+  width: 24px;
+  margin-right: 10px;
+}
+.offer img{
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.offer{
+  margin-bottom: 60px;
+}
+.offer-text{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 200px;
+  color: #fff;
+  background-color: #0d6dfd90;
+  width: 58%;
+  left: 335px;
+  height: 115px;
+  justify-content: center;
+  border-radius: 10px;
+}
+.boost{
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+.boost h3{
+  margin-bottom: 30px;
+}
+.boost-cards{
+  display: flex;
+  justify-content: space-between;
+}
+.boost-cards p{
+  font-size: 16px;
+  width: 200px;
+  text-align: center;
+  margin-top: 20px;
+}
+.boost-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.boost-card a{
+  text-decoration: none;
+  color: #000;
+}
+.boost-card img{
+  height: 60%;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+  border-radius: 95px;
+  transition: all 1s ease-out;
+}
+.boost-card img:hover {
+  transform: scale(1.1);
+}
+
+/*Узнать больше*/
+.more{
+  display: flex;
+  text-align: right;
+  flex-direction: column;
+}
+/*Карусель новостей*/
+.set-news-card {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.wrapper i {
+  top: 50%;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  font-size: 1.25rem;
+  position: absolute;
+  text-align: center;
+  line-height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
+}
+.wrapper i:active{
+  transform: translateY(-50%) scale(0.85);
+}
+.wrapper i:first-child{
+  left: -22px;
+  z-index: 1;
+}
+.wrapper i:last-child{
+  right: -22px;
+}
+.wrapper .carousel{
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 3) - 12px);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 16px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  width: 100%;
+
+}
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+.carousel.no-transition {
+  scroll-behavior: auto;
+}
+.carousel.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+.carousel.dragging .card {
+  cursor: grab;
+  user-select: none;
+}
+.carousel :where(.card, .img) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel .card {
+  scroll-snap-align: start;
+  list-style: none;
+  background: #fff;
+  cursor: pointer;
+  padding: 10px;
+  flex-direction: column;
+}
+.carousel .card img{
+  border-radius: 5px;
+}
+/*Карточки новостей*/
+.img-nc{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.text-nc{
+  margin-top: 1rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  text-align: left;
+}
+.img-nc a{
+  list-style-type: none;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bolder;
+  background-color: #fd9c0d;
+  padding: 10px;
+  margin-top: 0;
+  border-radius: 10px;
+  margin: 1rem;
+}
+
+/*Галлерея фото*/
+.gallery{
+  margin-bottom: 2.5rem;
+}
+.gallery-card img {
+  transition: all 1s ease-out;
+  margin-bottom: 0.4rem;
+}
+.gallery-card img:hover {
+  transform: scale(1.1);
+}
+.gallery-card p{
+  margin-bottom: 0;
+}
+.gallery-card{
+  margin-bottom: 1rem;
+}
+.gallery-cards{
+  display: flex;
+  justify-content: space-around;
+  align-content: stretch;
+  flex-wrap: wrap;
+}
+.gallery-small-cards{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.gallery-card-main img{
+  margin-bottom: 1rem;
+}
+
+/*Документы*/
+.cards-documents{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Подвал*/
+.foote-logo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+.foote-logo li{
+  color: #fff;
+}
+
+/*Кнопка вверх*/
+.btn-up {
+  /* фиксированное позиционирование */
+  position: fixed;
+  /* цвет фона */
+  background-color: #0d6efd;
+  /* расстояние от правого края окна браузера */
+  right: 20px;
+  /* расстояние от нижнего края окна браузера */
+  bottom: 0;
+  /* скругление верхнего левого угла */
+  border-top-left-radius: 8px;
+  /* скругление верхнего правого угла */
+  border-top-right-radius: 8px;
+  /* вид курсора */
+  cursor: pointer;
+  /* отображение элемента как flex */
+  display: flex;
+  /* выравниваем элементы внутри элемента по центру вдоль поперечной оси */
+  align-items: center;
+  /* выравниваем элементы внутри элемента по центру вдоль главной оси */
+  justify-content: center;
+  /* ширина элемента */
+  width: 60px;
+  /* высота элемента */
+  height: 50px;
+}
+
+.btn-up::before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  background: transparent no-repeat center center;
+  background-size: 100% 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23fff' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z'/%3E%3C/svg%3E");
+}
+
+.btn-up_hide {
+  display: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .btn-up:hover {
+    background-color: #fd9c0d; /* цвет заднего фона при наведении */
+  }
+}
+
+/* Для файла sport.html */
+/* Карточки доступных секций*/
+.card-section{
+  width: 320px;
+  height: 285px;
+  padding: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.color-blue{
+  color: #4A6CA7;
+  font-weight: bold;
+}
+.title-card-section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.title-card-section p{
+  margin-bottom: 0;
+}
+.text-card-section{
+  text-align: left;
+}
+.text-card-section p{
+  margin: 0;
+  font-size: 16.5px;
+}
+.cards-section{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.card-document{
+  margin-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.logo{
+  display: flex;
+  flex-direction: column;
+}
+.logo p{
+  margin-bottom: 0;
+  font-family: "Montserrat", serif
+}
+.navbar{
+  height: 90px;
+}
+.news{
+  margin-bottom: 6%;
+}
+.news-card p{
+  text-align: right;
+}
+.text-news-card p{
+  text-align: left;
+}
+/*тренера*/
+.text-news-card-trener{
+  text-align: center;
+}
+.news-card-trener p{
+  text-align: center;
+}
+
+/*About-us страница
+    информация*/
+.content-mi{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.text-mi ul{
+  list-style-type: none;
+}
+.text-mi p{
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+}
+.bolder{
+  font-size: 20px;
+  font-weight: 500;
+}
+.text-mi li{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.img-mi img{
+  width: 650px;
+  height: auto;
+}
+.text-mi{
+  width: 100%;
+}
+.ellipse{
+  width: 20px;
+  height: 20px;
+  border-radius: 100px;
+  background-color: #0d6efd;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.map-contact{
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+/*Контакты*/
+.map-contact{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.text-mc{
+  margin-right: 10%;
+}
+.text-mc ul{
+  list-style-type: none;
+}
+.contact-media img{
+  width: 40px;
+  height: auto;
+}
+.text-mc p{
+  margin-top: 1rem;
+  width: 100%;
+  text-align: left;
+}
+.text-mc img{
+  width: 30px;
+  height: auto;
+  margin-right: 20px;
+  margin-left: 20px;
+  transition: all 1s ease-out;
+}
+.text-mc li{
+  display: flex;
+  align-items: center;
+}
+.map-map{
+  width: 660px;
+  height: 400px;
+}
+.text-mc h3{
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.contact-media img{
+  width: 40px;
+  height: auto;
+  margin-right: 20px;
+  margin-left: 20px;
+  transition: all 1s ease-out;
+}
+.contact-media img:hover{
+  transform: scale(1.5);
+}
+
+/*таблица*/
+.table {
+	width: 100%;
+	border: none;
+	margin-bottom: 20px;
+	border-collapse: separate;
+}
+.table thead th {
+	font-weight: bold;
+	text-align: left;
+	border: none;
+	padding: 10px 15px;
+	background: #fd9d0d;
+  color: #F8F8F8;
+	font-size: 14px;
+	border-top: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+}
+.table tr th:first-child, .table tr td:first-child {
+	border-left: 1px solid #ddd;
+}
+.table tr th:last-child, .table tr td:last-child {
+	border-right: 1px solid #ddd;
+}
+.table thead tr th:first-child {
+	border-radius: 20px 0 0 0;
+}
+.table thead tr th:last-child {
+	border-radius: 0 20px 0 0;
+}
+.table tbody td {
+	text-align: center;
+	border: none;
+	padding: 10px 15px;
+	font-size: 14px;
+	vertical-align: top;
+  background-color: #fd9d0d37;
+}
+.table tbody tr:nth-child(even) {
+	background: #fd9d0d6d;
+}
+.table tbody tr:last-child td{
+	border-bottom: 1px solid #ddd;
+}
+.table tbody tr:last-child td:first-child {
+	border-radius: 0 0 0 20px;
+}
+.table tbody tr:last-child td:last-child {
+	border-radius: 0 0 20px 0;
+}
+tr{
+  text-align: center;
+}
+tr p{
+  margin: 0;
+}
+.rsps{
+  color: #fff;
+  text-decoration: none;
+}
+
+/*Модальные окна на регестрация и авторизацию*/
+.modal-body{
+  text-align: left;
+}
+.modal-form{
+  display: flex;
+  flex-direction: column;
+}
+label{
+  font-family: "Montserrat", sans-serif;
+  margin-top: 1rem;
+}
+input{
+  font-family: "Montserrat", sans-serif;
+  padding: 5px;
+  border-radius: 5px;
+  border: 2px solid #0d6dfd90;
+}
+.text-modal-body{
+  text-align: center;
+}
+.color-red{
+  color: #ff1c1c;
+  font-size: 16pt;
+}
+
+/*покупка билета*/
+.tickets {
+  width: 495px;
+  height: fit-content;
+  border: 0.4mm solid rgba(0, 0, 0, 0.08);
+  border-radius: 3mm;
+  box-sizing: border-box;
+  padding: 10px;
+  max-height: 96vh;
+  overflow: auto;
+  background: white;
+  box-shadow: 0px 25px 50px -12px rgba(0, 0, 0, 0.25);
+
+}
+.ticket-selector {
+  background: rgb(243, 243, 243);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 20px;
+}
+.seats {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 150px;
+  position: relative;
+}
+.status {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.seats::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 220px;
+  height: 7px;
+  background:           #fd9c0d;
+  border-radius: 0 0 3mm 3mm;
+  border-top: 0.3mm solid rgb(180, 180, 180);
+}
+.item {
+  font-size: 14px;
+  position: relative;
+  font-family: "Open Sans", sans-serif;
+}
+.item::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -12px;
+  transform: translate(0, -50%);
+  width: 10px;
+  height: 10px;
+  background: rgb(255, 255, 255);
+  outline: 0.2mm solid rgb(120, 120, 120);
+  border-radius: 0.3mm;
+}
+.item:nth-child(2)::before {
+  background: rgb(180, 180, 180);
+  outline: none;
+}
+.item:nth-child(3)::before {
+  background:           #0d6efd;
+  outline: none;
+}
+.all-seats {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-gap: 15px;
+  margin: 60px 0;
+  margin-top: 20px;
+  position: relative;
+}
+.seat {
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 0.5mm;
+  outline: 0.3mm solid rgb(180, 180, 180);
+  cursor: pointer;
+}
+.all-seats input:checked + label {
+  background:#0d6efd;
+  outline: none;
+}
+.seat.booked {
+  background: rgb(180, 180, 180);
+  outline: none;
+}
+input {
+  display: none;
+}
+.input-1 input{
+  display: block;
+}
+.timings {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+.dates {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.dates-item {
+  width: 80px;
+  height: 40px;
+  background: rgb(233, 233, 233);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px 0;
+  border-radius: 2mm;
+  cursor: pointer;
+}
+.day {
+  font-size: 12px;
+}
+.times {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.time {
+  font-size: 14px;
+  width: fit-content;
+  padding: 7px 14px;
+  background: rgb(233, 233, 233);
+  border-radius: 2mm;
+  cursor: pointer;
+}
+.timings input:checked + label {
+  background:           #0d6efd;
+  color: white;
+}
+.price {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.total {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 500;
+}
+.total span {
+  font-size: 11px;
+  font-weight: 400;
+}
+.price button {
+  color: white;
+  font-family: poppins;
+  font-size: 14px;
+  padding: 7px 14px;
+  border-radius: 2mm;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+/*карточка мероприятия*/
+.event{
+  box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 20px;
+  margin-bottom: 5%;
+}
+.afisha-text{
+  width: 100%;
+  text-align: left;
+}
+.event-text span{
+  font-size: 14pt;
+}
+.event-text{
+  margin-left: 20px;
+}
+.event-text h2{
+  font-family: "Montserrat", serif
+}
+/*карточка old мероприятия*/
+.card-oe{
+  box-shadow: 0 3px 6px rgba(0,0,0,0.32);
+  width: 300px;
+  padding: 10px 10px;
+  border-radius: 5px;
+  margin: 1.5% 1.5%;
+}
+.set-cards-oe{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.map-contact{
+  margin: 3% 0;
+}
+.main-info{
+  margin-bottom: 4%;
+}
+
+/*Для профиля*/
+.profile{
+  display: flex;
+  justify-content: space-around;
+  margin: 4rem 0;
+}
+.user-card{
+  box-shadow: 0 3px 6px rgba(0,0,0,0.32);
+  padding: 20px 20px;
+  border-radius: 6px;
+}
+.event-card a{
+  background-color: #fd9c0d;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+.event-card a:hover{
+  background-color: #d58000;
+}
+.user-card-info{
+text-align: left;
+}
+.info-user-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}

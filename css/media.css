@@ -1,0 +1,439 @@
+/*Каманина Алина ИСП-421р*/
+/*Медиа запросы для адаптива*/
+@media (max-width:1800px) {
+  .offer-text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 200px;
+    color: #fff;
+    background-color: #0d6dfd90;
+    width: 58%;
+    left: 345px;
+    height: 115px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1000px) {
+
+  .offer-text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 200px;
+    color: #fff;
+    background-color: #0d6dfd90;
+    width: 58%;
+    left: 350px;
+    height: 115px;
+    justify-content: center;
+  }
+
+  .navbar__wrap .menu {
+    display: none;
+  }
+
+  .hamb {
+    display: flex;
+    align-items: center;
+  }
+
+  .hamb__field {
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+  .bar {
+    display: block;
+    width: 30px;
+    height: 3px;
+    margin: 6px auto;
+    background-color: #fff;
+    transition: 0.2s;
+  }
+
+  .popup {
+    position: fixed;
+    top: 75px;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 100;
+    display: flex;
+    transition: 0.3s;
+  }
+
+  .popup.open {
+    left: 0;
+  }
+
+  .popup .menu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding: 50px 0;
+    overflow: auto;
+    background-color: #0d6dfd7f;
+  }
+
+  .popup .menu>li {
+    width: 100%;
+  }
+
+  .popup .menu>li>a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: #3f3f3f;
+    align-items: center;
+  }
+
+  .popup .menu>li>a:hover {
+    background-color: rgba(122, 82, 179, 0.1);
+  }
+
+  .hamb__field.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamb__field.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamb__field.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  body.noscroll {
+    overflow: hidden;
+  }
+
+}
+
+@media (min-width: 481px) and (max-width: 960px) {
+
+  .wrapper .carousel {
+    grid-auto-columns: calc((100% / 2) - 12px);
+    width: 800px;
+  }
+
+  main {
+    margin: 0;
+  }
+
+  .phone_header {
+    justify-content: center;
+  }
+
+  .offer img {
+    width: 100%;
+  }
+
+  .offer-text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 182px;
+    color: #fff;
+    background-color: #0d6dfd90;
+    height: 70px;
+    justify-content: center;
+    border-radius: 0;
+    width: 100%;
+    left: 0;
+  }
+
+  .offer-text h1 {
+    font-size: 24px;
+  }
+
+  .offer-text p {
+    font-size: 12px;
+  }
+
+  .boost h3 {
+    font-size: 20px;
+  }
+
+  .offer {
+    margin-bottom: 30px;
+  }
+
+  .boost-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .title-name h2,
+  .tetle-name h2 {
+    font-size: 22px;
+  }
+
+  .title-name p {
+    font-size: 14px;
+  }
+
+  .gallery-small-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .gallery-cards {
+    flex-direction: column;
+  }
+
+  .card-document img {
+    width: 40px;
+  }
+
+  .event {
+    flex-direction: column;
+  }
+
+  .event-text h2 {
+    font-size: 20px;
+  }
+
+  .event-text span {
+    font-size: 13pt;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .content-mi {
+    flex-direction: column;
+  }
+
+  .img-mi img {
+    width: 100%;
+  }
+
+  .map-contact {
+    flex-direction: column;
+    padding: 2% 0;
+  }
+
+  .map iframe {
+    width: 100%;
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .d-flex {
+    align-items: flex-end;
+  }
+
+  .table thead th {
+    font-size: 10px;
+  }
+
+  .table tbody td p {
+    font-size: 10px;
+  }
+
+  .table tbody td {
+    padding: 0;
+  }
+
+  i {
+    display: none;
+  }
+
+  .profile {
+    flex-direction: column;
+    margin: 0;
+  }
+}
+
+
+
+@media (max-width: 480px) {
+  .wrapper .carousel {
+    grid-auto-columns: calc((100% / 1) - 12px);
+    width: 400px;
+  }
+
+  main {
+    margin: 0;
+  }
+
+  .phone_header {
+    justify-content: center;
+  }
+
+  .offer img {
+    width: 100%;
+  }
+
+  .offer-text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 190px;
+    color: #fff;
+    background-color: #0d6dfd90;
+    height: 70px;
+    justify-content: center;
+    border-radius: 0;
+    width: 100%;
+    left: 0;
+  }
+
+  .offer-text h1 {
+    font-size: 18px;
+  }
+
+  .offer-text p {
+    font-size: 10px;
+  }
+
+  .boost h3 {
+    font-size: 16px;
+  }
+
+  .offer {
+    margin-bottom: 30px;
+  }
+
+  .boost-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .title-name h2,
+  .tetle-name h2 {
+    font-size: 16px;
+  }
+
+  .title-name p {
+    font-size: 12px;
+  }
+
+  .gallery-small-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .gallery-cards {
+    flex-direction: column;
+  }
+
+  .card-document img {
+    width: 40px;
+  }
+
+  .event {
+    flex-direction: column;
+  }
+
+  .event-text h2 {
+    font-size: 16px;
+  }
+
+  .event-text span {
+    font-size: 11pt;
+  }
+
+  p {
+    font-size: 12px;
+  }
+
+  .content-mi {
+    flex-direction: column;
+  }
+
+  .img-mi img {
+    width: 100%;
+  }
+
+  .map-contact {
+    flex-direction: column;
+    padding: 2% 0;
+  }
+
+  .map iframe {
+    width: 100%;
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .d-flex {
+    align-items: flex-end;
+  }
+
+  .boost-card img {
+    width: 120px;
+    height: auto;
+  }
+
+  .gallery-card-main img {
+    width: 400px;
+    height: auto;
+  }
+
+  .gallery-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+  }
+
+  .table thead th {
+    font-size: 6px;
+  }
+
+  .table tbody td p {
+    font-size: 5px;
+  }
+
+  .table tbody td {
+    padding: 0;
+  }
+
+  footer ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-mi p {
+    font-size: 12px;
+  }
+
+  .map-contact {
+    box-shadow: none;
+  }
+
+  i {
+    display: none;
+  }
+
+  .profile {
+    flex-direction: column;
+    margin: 0;
+  }
+}
